@@ -21,14 +21,11 @@ const Navbar = () => {
                     <Flex align="center" pt={7} pb={7}>
                         <Flex align="center" mr={10} cursor="pointer">
                             <Image 
-                                src="/logo.png"
+                                src="/logo.svg"
                                 alt='logo'
-                                width="32px"
+                                width="142px"
                                 height="32px"
                                 />
-                            <Heading ml={2.5} color={customColors.gray900}>
-                                Untitled UI
-                            </Heading>
                         </Flex>
                         <Flex display={["none", "none", "flex", "flex", "flex"]}>
                             <Box mr={8} color={customColors.gray500}>
@@ -78,7 +75,7 @@ const Navbar = () => {
                     </Flex>
                     <Flex display={["none", "none", "flex", "flex", "flex"]} align="center">
                         <Box mr={8} cursor="pointer">
-                            <NextLink href="login" passHref>
+                            <NextLink href="/login" passHref>
                                 <Text color={customColors.gray500} fontSize={customFontSizes.sm}>
                                     Log in
                                 </Text>

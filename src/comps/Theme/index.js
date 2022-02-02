@@ -10,6 +10,8 @@ const fonts = {
 		sm: "16px",
 		md: "18px",
 		lg: "20px",
+		large: "24px",
+		l: "30px",
 		xl: "36px",
 		title: "60px"
 	}

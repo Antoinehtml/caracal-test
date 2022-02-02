@@ -4,7 +4,16 @@ import { mode } from '@chakra-ui/theme-tools';
 import Button from './Button';
 
 // ? https://chakra-ui.com/docs/theming/theme#typography
-const fonts = {};
+const fonts = {
+	size: {
+		smaller: "14px",
+		sm: "16px",
+		md: "18px",
+		lg: "20px",
+		xl: "36px",
+		title: "60px"
+	}
+};
 
 // ? https://chakra-ui.com/docs/theming/theme#breakpoints
 const breakpoints = ['576px', '768px', '992px', '1200px', '1440px'];
@@ -16,7 +25,18 @@ breakpoints.xl = '1200px';
 breakpoints.xxl = '1440px';
 
 // ? https://chakra-ui.com/docs/theming/theme#colors
-const colors = {};
+const colors = {
+	brand: {
+		gray500: "#667085",
+		gray900: "#101828",
+		primary50: "#EDEEFC",
+		primary500: '#4F55E3',
+		primary600: "#232ADC",
+		primary700: "#1D24B9",
+		primary900: "#12156E",
+
+	}
+};
 
 // ? https://chakra-ui.com/docs/theming/theme#spacing
 const space = {};

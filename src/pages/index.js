@@ -1,18 +1,14 @@
 import { Heading, Image } from '@chakra-ui/react';
 
-import Container from '_comps/Layout/Container';
-import Col from '_comps/Layout/Col';
+import Navbar from '_comps/Navbar';
+import Body from '_comps/Body';
 
 const Home = () => (
-	<Container h="100vh" alignItems="center">
-		<Col colStart={2} colEnd={26} textAlign="center">
-			<Heading as="h1" fontSize="6xl">
-				Hello world
-			</Heading>
+	<>
+			<Navbar />
+			<Body />
 
-			<Image src="/logo_caracal-studio.svg" alt="Caracal Studio’s logo" maxWidth="200" my={8} d="inline" />
-		</Col>
-	</Container>
+	</>
 );
 
 export default Home;

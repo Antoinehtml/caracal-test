@@ -1,14 +1,18 @@
 import { Grid } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
+import Navbar from '_comps/Navbar';
+
 const Container = ({ children, ...rest }) => (
-	<Grid
-		w="100%"
-		templateColumns="[full-start] minmax(calc(calc(100% - 1440px) / 2), 1fr) [main-start] repeat(24, [col-start] 1fr) [main-end] minmax(calc(calc(100% - 1440px) / 2), 1fr) [full-end]"
-		{...rest} // eslint-disable-line react/jsx-props-no-spreading
-	>
-		{children}
-	</Grid>
+	<>
+		<Grid
+			w="100%"
+			templateColumns="[full-start] minmax(calc(calc(100% - 1440px) / 2), 1fr) [main-start] repeat(24, [col-start] 1fr) [main-end] minmax(calc(calc(100% - 1440px) / 2), 1fr) [full-end]"
+			{...rest} // eslint-disable-line react/jsx-props-no-spreading
+		>
+			{children}
+		</Grid>
+	</>
 );
 
 Container.propTypes = {

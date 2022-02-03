@@ -14,7 +14,7 @@ const Landing = () => {
     
     return (
         <Container backgroundColor={customColors.primary50}>
-            <Col colStart={[2, null, 3, null, null]} colEnd={[26, null, 25, null, null]} mb={[16, null, 24 ,null , null]}>
+            <Col colStart={[2, null, 3, null, null]} colEnd={[26, null, 25, null, null]} mt={16} mb={[16, null, 24 ,null , null]}>
                 <Flex position="relative" direction={["column", null, "row", null, null]} justify="flex-start" minHeight="640px">
                     <Flex direction="column" zIndex="1" w={["100%", null, null, "800px", null]}>
                         <Heading 
@@ -23,7 +23,6 @@ const Landing = () => {
                             fontSize={[customFontSizes.xl, null, customFontSizes.title, null, null]} 
                             lineHeight={["44px", null, "72px", null, null]} mb={[4, 4, 4, 6, 6]}
                             fontWeight="semibold"
-                            mt={[16, null, "120px", null, null]}
                             w={["90%", null, null, "800px", null]}
                         >
                             Customer service software for customer-first teams
@@ -50,7 +49,7 @@ const Landing = () => {
                                     color={customColors.primary500} 
                                     mt={[2, 2, 0, 0, 0]}
                                 >
-                                    We care about your data in our 
+                                    We care about your data in our&nbsp; 
                                 </Text>
                                 <NextLink href="/" passHref>
                                     <Text
@@ -84,7 +83,7 @@ const Landing = () => {
                                 color={customColors.primary500} 
                                 mt={[2, 2, 0, 0, 0]}
                             >
-                                We care about your data in our &nbsp;
+                                We care about your data in our&nbsp;
                             </Text>
                             <NextLink href="/" passHref>
                                 <Text

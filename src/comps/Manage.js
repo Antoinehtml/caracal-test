@@ -13,7 +13,7 @@ const Share = () => {
 
     return (
         <>      
-            <Col gridRow={2} colStart={[2, null, 3, null, null]} colEnd={[26, null, 13, null, null]} mb={[10, null, 0, null, null]}>               
+            <Col gridRow={[6, null, 4, null, null]} colStart={[2, null, 3, null, null]} colEnd={[26, null, 13, null, null]} mb={[10, null, 0, null, null]}>               
                     <Flex 
                         direction="column" 
                         justify={["flex-start", null, "center", null, null ]}
@@ -35,7 +35,7 @@ const Share = () => {
                             fontWeight="semibold"
                             mb={[2, null, 4, null, null]}
                         >
-                            Share team inboxes
+                            Manage your team with reports
                         </Heading>
                         <Text 
                             fontSize={[customFontSizes.sm, null, customFontSizes.md, null, null]}
@@ -46,7 +46,7 @@ const Share = () => {
                             Whether you have a team of 2 or 200, our shared team inboxes 
                             keep everyone on the same page and in the loop.
                         </Text>
-                        <Flex pr={[2, null, "0", null, null]} pl={[2, null, 4, null, null]}>
+                        <Flex pr={[2, null, "0", null, null]} pl={[2, null, "0", null, null]}>
                             <UnorderedList margin="0">
                                 <ListItem display="flex" align="center">
                                     <Box mr={3} position="relative" minWidth="28px" h="28px">
@@ -107,7 +107,7 @@ const Share = () => {
                         </Flex>
                     </Flex>
             </Col>
-            <Col gridRow={[3, null, 2, null, null]} colStart={[1, null, 14, null, null]} colEnd={27} mb={[12, null, 24, null, null]}>
+            <Col gridRow={[7, null, 4, null, null]} colStart={[1, null, 14, null, null]} colEnd={27} mb={[12, null, 24, null, null]}>
                 <Flex 
                     display={["none", null, "flex", null, null]}
                     position="relative"

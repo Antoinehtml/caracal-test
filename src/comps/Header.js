@@ -10,8 +10,8 @@ const Header = () => {
 
     return (
         <>
-            <Col colStart={[2, null, 3, null, null]} colEnd={[26, null, 25, null, null]} mt={24} >
-                <Flex direction="column" justify="center" align="center" mb={[12, 12, 24, 24, 24]}>
+            <Col gridRow="1" colStart={[2, null, 3, null, null]} colEnd={[26, null, 25, null, null]}  >
+                <Flex direction="column" justify="center" align="center" mt={[16, null, 24 ,null , null]} mb={[12, null, 24, null, null]}>
                         <Heading 
                             fontSize={[customFontSizes.smaller, null, customFontSizes.sm, null, null]} 
                             fontWeight="semibold" 

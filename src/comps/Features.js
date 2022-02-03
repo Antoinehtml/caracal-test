@@ -76,13 +76,13 @@ const Features = () => {
                             Whether you have a team of 2 or 200, our shared team inboxes 
                             keep everyone on the same page and in the loop.
                         </Text>
-                        <Flex>
-                            <UnorderedList>
+                        <Flex maxWidth="335px" pr={[2, null, "0", null, null]} pl={[2, null, "0", null, null]}>
+                            <UnorderedList margin="0">
                                 <ListItem display="flex" align="center">
                                     <Box mr={3} position="relative" minWidth="28px" h="28px">
 
                                         <Image 
-                                            src="/check-icon.png"
+                                            src="/check-icon.svg"
                                             layout="fill"
                                             objectFit="cover"
                                             height="28px"
@@ -101,7 +101,7 @@ const Features = () => {
                                 <ListItem display="flex" align="center">
                                     <Box mr={3} position="relative" minWidth="28px" h="28px">
                                         <Image 
-                                            src="/check-icon.png"
+                                            src="/check-icon.svg"
                                             alt=""
                                             layout="fill"
                                             objectFit="cover"
@@ -120,7 +120,7 @@ const Features = () => {
                                 <ListItem display="flex" align="center">
                                     <Box mr={3} position="relative" minWidth="28px" h="28px">
                                         <Image 
-                                            src="/check-icon.png"
+                                            src="/check-icon.svg"
                                             alt=""
                                             layout="fill"
                                             objectFit="cover"
@@ -142,30 +142,24 @@ const Features = () => {
             <Col colStart={[1, null, 14, null, null]} colEnd={27} >
                 <Flex 
                     display={["none", null, "flex", null, null]}
-                    position="relative" 
-                    w="100%"
-                    h="512px" 
+                    position="relative"
                 >
                     <Image 
-                        src="/mockup-wrap.png"
+                        src="/mockup-wrap.jpeg"
                         alt="mockup"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="top"
+                        width="768px"
+                        height="512px"
                     />
                 </Flex>
                 <Flex 
                     display={["flex", null, "none", null, null]}
                     position="relative" 
-                    w="100%"
-                    h="276px"
                 >
                     <Image 
-                        src="/mock-up-mobile.png"
+                        src="/mockup-mobile.jpeg"
                         alt="mockup"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="top"
+                        width="375px"
+                        height="276px"
                     />
                 </Flex>
             </Col>

@@ -17,7 +17,7 @@ const Navbar = () => {
     return (
         <Container backgroundColor={customColors.primary50}>
             <Col colStart={[2, 2, 3, 3, 3]} colEnd={[26, 26, 25, 25, 25]} >
-                <Flex justify="space-between" align="center">    
+                <Flex justify="space-between" align="center" maxHeight="100px">    
                     <Flex align="center" pt={7} pb={7}>
                         <Flex align="center" mr={10} cursor="pointer">
                             <Image 

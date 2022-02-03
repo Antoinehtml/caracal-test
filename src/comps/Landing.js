@@ -2,6 +2,8 @@ import Container from '_comps/Layout/Container';
 import Col from '_comps/Layout/Col'
 
 import { Flex, Heading, Text, Input, Button } from "@chakra-ui/react";
+
+import NextLink from 'next/link'
 import Image from 'next/image'
 
 import theme from '_comps/Theme';
@@ -23,7 +25,7 @@ const Landing = () => {
                         >
                             Customer service software for customer-first teams
                         </Heading>
-                        <Text mb={[8, 8, 12, 12, 12]} fontSize={customFontSizes.md} color={customColors.primary700}>
+                        <Text mb={[8, 8, 12, 12, 12]} fontSize={customFontSizes.md} color={customColors.primary700} maxWidth="560px">
                             The best customer service software for customer-first teams. 
                             Industry-leading email and live chat support.
                         </Text>
@@ -38,14 +40,27 @@ const Landing = () => {
                                 borderRadius="8px"
                                 mr={0, 0, 4, 4, 4}
                             />
-                            <Text 
-                                display={["flex", null, "none", null, null]}
-                                fontSize={customFontSizes.smaller} 
-                                color={customColors.primary500} 
-                                mt={[2, 2, 0, 0, 0]}
-                            >
-                                We care about your data in our privacy policy
-                            </Text>
+                            <Flex>
+                                <Text 
+                                    display={["flex", null, "none", null, null]}
+                                    fontSize={customFontSizes.smaller} 
+                                    color={customColors.primary500} 
+                                    mt={[2, 2, 0, 0, 0]}
+                                >
+                                    We care about your data in our 
+                                </Text>
+                                <NextLink href="/" passHref>
+                                    <Text
+                                        display={["flex", null, "none", null, null]}
+                                        fontSize={customFontSizes.smaller} 
+                                        color={customColors.primary500} 
+                                        mt={[2, 2, 0, 0, 0]}
+                                        textDecoration="underline"
+                                    >
+                                        privacy policy
+                                    </Text>
+                                </NextLink>
+                            </Flex>
                             <Button
                                 width="128px"
                                 height="48px"
@@ -59,13 +74,27 @@ const Landing = () => {
                                 Get Started
                             </Button>
                         </Flex>
-                        <Text 
-                            display={["none", null, "flex", null, null]} 
-                            fontSize={customFontSizes.smaller} 
-                            color={customColors.primary500}
-                        >
-                            policy
-                        </Text>
+                        <Flex>
+                            <Text 
+                                display={["none", null, "flex", null, null]}
+                                fontSize={customFontSizes.smaller} 
+                                color={customColors.primary500} 
+                                mt={[2, 2, 0, 0, 0]}
+                            >
+                                We care about your data in our &nbsp;
+                            </Text>
+                            <NextLink href="/" passHref>
+                                <Text
+                                    display={["none", null, "flex", null, null]}
+                                    fontSize={customFontSizes.smaller} 
+                                    color={customColors.primary500} 
+                                    mt={[2, 2, 0, 0, 0]}
+                                    textDecoration="underline"
+                                >
+                                    privacy policy
+                                </Text>
+                            </NextLink>
+                        </Flex>
                     </Flex>
                     <Flex 
                         position={["relative", null, "absolute", null, null]} 
@@ -76,7 +105,7 @@ const Landing = () => {
                         height={["100%", null, "640px", null, null]}
                     >
                         <Image 
-                            src="/landing-image.png"
+                            src="/landing-image.jpeg"
                             alt="image homepage"
                             layout="fill"
                             objectFit="cover"
@@ -85,7 +114,7 @@ const Landing = () => {
                     </Flex>
                     <Flex display={["none", null, "flex", null, null]} position="absolute" right="33%" bottom="89px">
                         <Image 
-                            src="/landing-arrow.png"
+                            src="/landing-arrow.svg"
                             alt="arrow homepage"
                             width="332.37px"
                             height="99.38px"

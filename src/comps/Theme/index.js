@@ -30,11 +30,14 @@ breakpoints.xxl = '1440px';
 const colors = {
 	brand: {
 		gray500: "#667085",
+		gray700: "#344054",
 		gray900: "#101828",
 		primary50: "#EDEEFC",
+		primary200: "#BDBFF5",
 		primary500: '#4F55E3',
 		primary600: "#232ADC",
 		primary700: "#1D24B9",
+		primary800: "#191E9A",
 		primary900: "#12156E",
 
 	}

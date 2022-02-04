@@ -41,7 +41,7 @@ const Navbar = () => {
                                 </NextLink>
                                 <Flex>   
                                     <Image 
-                                        src="/icon-landing.png"
+                                        src="/icon-menu.svg"
                                         alt="arrow bottom"
                                         width="10px"
                                         height="5px"
@@ -56,7 +56,7 @@ const Navbar = () => {
                                 </NextLink>
                                 <Flex>   
                                     <Image 
-                                        src="/icon-landing.png"
+                                        src="/icon-menu.svg"
                                         alt="arrow bottom"
                                         width="10px"
                                         height="5px"
@@ -87,7 +87,7 @@ const Navbar = () => {
                     </Flex>
                     <Flex display={["flex", "flex", "none", "none", "none"]} cursor="pointer">
                         <Image 
-                            src="/menu.png"
+                            src="/hamburger-nav.svg"
                             al="menu burger"
                             width="24px"
                             height="24px"

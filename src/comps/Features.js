@@ -4,6 +4,7 @@ import Header from './Header'
 import Share from "./Share"
 import Deliver from './Deliver'
 import Manage from './Manage'
+import FreeTrialBanner from './FreeTrialBanner'
 
 const Features = () => {
     return (
@@ -12,6 +13,7 @@ const Features = () => {
             <Share />
             <Deliver />
             <Manage />
+            <FreeTrialBanner />
         </Container>
     )
 };

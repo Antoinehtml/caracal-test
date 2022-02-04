@@ -21,7 +21,9 @@ const Landing = () => {
                             as="h1" 
                             color={customColors.primary900} 
                             fontSize={[customFontSizes.xl, null, customFontSizes.title, null, null]} 
-                            lineHeight={["44px", null, "72px", null, null]} mb={[4, 4, 4, 6, 6]}
+                            lineHeight={["44px", null, "72px", null, null]} 
+                            mb={[4, 4, 4, 6, 6]}
+                            mt={[0, null, 32, null, null]}
                             fontWeight="semibold"
                             w={["90%", null, null, "800px", null]}
                         >

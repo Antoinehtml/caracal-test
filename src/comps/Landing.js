@@ -1,7 +1,8 @@
-import Container from '_comps/Layout/Container';
+import Container from '_comps/Layout/Container'
 import Col from '_comps/Layout/Col'
+import MotionBox from 'src/MotionBox'
 
-import { Flex, Heading, Text, Input, Button } from "@chakra-ui/react";
+import { Flex, Heading, Text, Input, Button } from "@chakra-ui/react"
 
 import NextLink from 'next/link'
 import Image from 'next/image'
@@ -17,7 +18,7 @@ const Landing = () => {
             <Col colStart={[2, null, 3, null, null]} colEnd={[26, null, 25, null, null]} mt={16} mb={[16, null, 24 ,null , null]}>
                 <Flex position="relative" direction={["column", null, "row", null, null]} justify="flex-start" minHeight="640px">
                     <Flex direction="column" zIndex="1" w={["100%", null, null, "800px", null]}>
-                        <Heading 
+                        <MotionBox 
                             as="h1" 
                             color={customColors.primary900} 
                             fontSize={[customFontSizes.xl, null, customFontSizes.title, null, null]} 
@@ -26,13 +27,49 @@ const Landing = () => {
                             mt={[0, null, 32, null, null]}
                             fontWeight="semibold"
                             w={["90%", null, null, "800px", null]}
+                            initial="hidden"
+                            animate="visible" 
+                            variants={{
+                                hidden: {
+                                    opacity: 0,
+                                    x: -100
+                                },
+                                visible: {
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: {
+                                        duration: 1
+                                    }
+                                }
+                            }}
                         >
                             Customer service software for customer-first teams
-                        </Heading>
-                        <Text mb={[8, 8, 12, 12, 12]} fontSize={customFontSizes.lg} fontWeight="normal" color={customColors.primary700} maxWidth="530px">
+                        </MotionBox>
+                        <MotionBox 
+                            as="p" 
+                            mb={[8, 8, 12, 12, 12]} 
+                            fontSize={customFontSizes.lg} 
+                            fontWeight="normal" 
+                            color={customColors.primary700} 
+                            maxWidth="530px"
+                            initial="hidden"
+                            animate="visible" 
+                            variants={{
+                                hidden: {
+                                    opacity: 0
+                                },
+                                visible: {
+                                    opacity: 1,
+                                    transition: {
+                                        duration: 2,
+                                        delay: .8
+                                    }
+                                }
+                            }}
+                        >
                             The best customer service software for customer-first teams. 
                             Industry-leading email and live chat support.
-                        </Text>
+                        </MotionBox>
                         <Flex direction={["column", null, "row", null, null]} mb={2}>
                             <Input 
                                 placeholder='Enter your email'
@@ -74,6 +111,7 @@ const Landing = () => {
                                 fontSize={customFontSizes.sm}
                                 mt={[4, null, 0, null, null]}
                                 mb={[16, null, 0, null, null]}
+                                _hover={{ backgroundColor: "#7277E9"}}
                             >
                                 Get Started
                             </Button>
@@ -125,14 +163,26 @@ const Landing = () => {
                             height="240px"
                         />
                     </Flex>
-                    <Flex display={["none", null, "flex", null, null]} position="absolute" right="394.27px" bottom="89.27px">
+                    <MotionBox 
+                        display={["none", null, "flex", null, null]} 
+                        position="absolute" right="394.27px" 
+                        bottom="89.27px"
+                        animate={{
+                            x: 20,
+                            y: 10,
+                            transition: {
+                            yoyo: Infinity,
+                            duration: 1
+                            },
+                        }}
+                    >
                         <Image 
                             src="/landing-arrow.svg"
                             alt="arrow homepage"
                             width="332.37px"
                             height="99.38px"
                         />
-                    </Flex>
+                    </MotionBox>
                 </Flex>
             </Col>
         </Container>

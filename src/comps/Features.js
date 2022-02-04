@@ -7,6 +7,7 @@ import Manage from './Manage'
 import FreeTrialBanner from './FreeTrialBanner'
 
 const Features = () => {
+
     return (
         <Container mb={[10, null, 24, null, null]}> 
             <Header />   

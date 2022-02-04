@@ -88,7 +88,14 @@ const Navbar = () => {
                                 </Text>
                             </NextLink>
                         </Box>
-                        <Button w="94px" h="44px" borderRadius="8px" backgroundColor={customColors.primary600} color="white">
+                        <Button 
+                            w="94px" 
+                            h="44px" 
+                            borderRadius="8px" 
+                            backgroundColor={customColors.primary600} 
+                            color="white"
+                            _hover={{ backgroundColor: "#7277E9"}}
+                        >
                             Sign up
                         </Button>
                     </Flex>

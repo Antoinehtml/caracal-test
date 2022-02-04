@@ -111,6 +111,7 @@ const Landing = () => {
                                 fontSize={customFontSizes.sm}
                                 mt={[4, null, 0, null, null]}
                                 mb={[16, null, 0, null, null]}
+                                _hover={{ backgroundColor: "#7277E9"}}
                             >
                                 Get Started
                             </Button>

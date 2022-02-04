@@ -71,6 +71,7 @@ const FreeTrialBanner = () => {
                         color={customColors.gray700}
                         fontSize={customFontSizes.sm}
                         mr={[0, null, 3, null, null]}
+                        _hover={{ backgroundColor: "#D3D4F8"}}
                     >
                         Learn More
                     </Button>
@@ -82,6 +83,7 @@ const FreeTrialBanner = () => {
                         color="white"
                         fontSize={customFontSizes.sm}
                         mb={[3, null, 0, null, null]}
+                        _hover={{ backgroundColor: "#7277E9"}}
                     >
                         Get started
                     </Button>

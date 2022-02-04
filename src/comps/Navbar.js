@@ -1,16 +1,23 @@
-import Container from '_comps/Layout/Container';
-import Col from '_comps/Layout/Col';
+import Container from '_comps/Layout/Container'
+import Col from '_comps/Layout/Col'
 
-import { Heading, Flex, Box, Text, Button, IconButton } from '@chakra-ui/react';
-import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
+import { Flex, Box, Text, Button, IconButton } from '@chakra-ui/react'
+import { useState } from 'react'
 
 import NextLink from 'next/link'
 import Image from 'next/image'
 
 
-import theme from '_comps/Theme';
+import theme from '_comps/Theme'
 
 const Navbar = () => {
+
+    const [click, setClick] = useState(true)
+    const handleClick = () => {
+        setClick(!click)
+    }
+
+
     const customColors = theme.colors.brand
     const customFontSizes = theme.fonts.size
 
@@ -85,9 +92,13 @@ const Navbar = () => {
                             Sign up
                         </Button>
                     </Flex>
-                    <Flex display={["flex", "flex", "none", "none", "none"]} cursor="pointer">
+                    <Flex 
+                        display={["flex", "flex", "none", "none", "none"]} 
+                        cursor="pointer"        
+                    >
                         <Image 
-                            src="/hamburger-nav.svg"
+                            onClick={handleClick}
+                            src={click ? "/hamburger-nav.svg" : "/close-icon.svg" }                            
                             al="menu burger"
                             width="24px"
                             height="24px"

@@ -1,6 +1,11 @@
 import Col from '_comps/Layout/Col'
+import MotionBox from 'src/MotionBox'
 
-import { Flex, Heading, Text, Box, UnorderedList, ListItem } from "@chakra-ui/react";
+import { Flex, Heading, Text, Box, UnorderedList, ListItem } from "@chakra-ui/react"
+import { useAnimation } from 'framer-motion'
+import { useInView } from 'react-hook-inview'
+import { useEffect } from 'react'
+
 import Image from 'next/image'
 
 import theme from '_comps/Theme';
@@ -8,18 +13,42 @@ import theme from '_comps/Theme';
 
 
 const Share = () => {
+    const controls = useAnimation()
+    const [ref, inView] = useInView()
+    useEffect(() => {
+        if (inView) {
+          controls.start("visible");
+        }
+      }, [controls, inView]);
+
     const customColors = theme.colors.brand
     const customFontSizes = theme.fonts.size
 
     return (
         <>      
             <Col gridRow={2} colStart={[2, null, 3, null, null]} colEnd={[26, null, 13, null, null]} mb={[10, null, 0, null, null]}>               
-                    <Flex 
-                        direction="column" 
-                        justify={["flex-start", null, "center", null, null ]}
-                        align="flex-start" 
+                    <MotionBox 
+                        display="flex"
+                        flexDirection="column" 
+                        justifyContent={["flex-start", null, "center", null, null ]}
+                        alignItems="flex-start" 
                         h={["auto", null, "512px", null, null]}
                         maxWidth={["335px", null, "504px", null, null]} 
+                        initial="hidden"
+                        ref={ref}
+                        animate={controls}
+                        variants={{
+                            hidden: {
+                                opacity: 0
+                            },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    duration: 2,
+                                    delay: 1
+                                }
+                            }
+                        }}
                     >
                         <Box mb={6}>
                             <Image 
@@ -105,7 +134,7 @@ const Share = () => {
                                 </ListItem>
                             </UnorderedList>
                         </Flex>
-                    </Flex>
+                    </MotionBox>
             </Col>
             <Col gridRow={[3, null, 2, null, null]} colStart={[1, null, 14, null, null]} colEnd={27} mb={[12, null, 24, null, null]}>
                 <Flex 
